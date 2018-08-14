@@ -1,5 +1,5 @@
 (function () {
-  const BASE_URL = 'http://movie.spreered.com'
+  const BASE_URL = 'https://movie.spreered.com'
   const INDEX_URL = BASE_URL + '/api/v1/movies/'
   const POSTER_URL = BASE_URL + '/posters/'
   const dataPanel = document.getElementById('data-panel')
@@ -15,7 +15,7 @@
     }
   })
 
-  function displayDataList(dataList) {
+  function displayDataList (dataList) {
     let htmlContent = ''
     dataList.forEach(function (item, index) {
       htmlContent += `
@@ -36,7 +36,7 @@
     dataPanel.innerHTML = htmlContent
   }
 
-  function showMovie(movieId) {
+  function showMovie (movieId) {
     const modalTitle = document.getElementById('show-movie-title')
     const modalImage = document.getElementById('show-movie-image')
     const modalDate = document.getElementById('show-movie-date')
@@ -53,7 +53,7 @@
     })
   }
 
-  function removeFavoriteItem(id) {
+  function removeFavoriteItem (id) {
     const index = data.findIndex(item => item.id == id)
     if (index === -1) return
     // delete item and save it to localStorage
